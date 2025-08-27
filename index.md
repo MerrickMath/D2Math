@@ -107,8 +107,6 @@
   </li>
 </ul>
 
-
-
 <!-- Resources -->
 <h2 id="resources">Class Resources</h2>
 <ul>
