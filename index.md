@@ -22,8 +22,6 @@
 
 <!-- Quizzes -->
 <h2 id="exam">Materials</h2>
-<!-- Clear static expectations -->
-<h3 style="margin-top:1rem">Quizzes</h3>
 <ul>
   <li><a href="https://merrickmath.github.io/APSTAT/materials/Unit1.pdf">Slides</a> </li>
 </ul>
