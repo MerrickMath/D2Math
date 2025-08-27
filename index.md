@@ -1,7 +1,7 @@
 <!-- Hero -->
 <section style="padding:1.25rem 0;border-bottom:1px solid #eee">
   <p style="margin:.25rem 0 0;color:#555">
-    Welcome! Class updates, materials, and homework will be posted here.
+    Welcome! Materials and cool stuff will be posted here.
   </p>
   <!-- Optional: keep your Schoology/GC join code hidden -->
   <!-- Join code: VPZG-6XVG-9T8JS -->
@@ -9,14 +9,14 @@
 
 <!-- Quick links as “cards” -->
 <section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.75rem;margin:1rem 0">
-  <a class="card" href="https://apcentral.collegeboard.org/media/pdf/ap-statistics-course-at-a-glance.pdf" style="text-decoration:none;border:1px solid #e6e6e6;border-radius:12px;padding:.9rem">
-    <strong>Course at a Glance</strong><br><small>College Board</small>
+  <a class="card" href="https://merrickmath.github.io/PAT.html" style="text-decoration:none;border:1px solid #e6e6e6;border-radius:12px;padding:.9rem">
+    <strong>PAT 6 Practice</strong><br><small>Mental Math</small>
   </a>
-  <a class="card" href="https://apcentral.collegeboard.org/courses/ap-statistics/exam" style="text-decoration:none;border:1px solid #e6e6e6;border-radius:12px;padding:.9rem">
-    <strong>Exam Info</strong><br><small>Format, topics, scoring</small>
+  <a class="card" href="https://merrickmath.github.io/CoordinateGame.html" style="text-decoration:none;border:1px solid #e6e6e6;border-radius:12px;padding:.9rem">
+    <strong>Coordinate Dash</strong><br><small>Transformations</small>
   </a>
-  <a class="card" href="https://apcentral.collegeboard.org/courses/ap-statistics/exam/past-exam-questions" style="text-decoration:none;border:1px solid #e6e6e6;border-radius:12px;padding:.9rem">
-    <strong>Past Exam Problems</strong><br><small>Past Exam Poblems</small>
+  <a class="card" href="https://merrickmath.github.io/Divisors.html" style="text-decoration:none;border:1px solid #e6e6e6;border-radius:12px;padding:.9rem">
+    <strong>Divisor Trainer</strong><br><small> Mental Math</small>
   </a>
 </section>
 
