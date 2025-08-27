@@ -21,21 +21,27 @@
 </section>
 
 
-<!-- AP Exam -->
+<!-- Quizzes -->
 <h2 id="exam">Materials</h2>
 <!-- Clear static expectations -->
 <h3 style="margin-top:1rem">Quizzes</h3>
 <ul>
-  <li><strong>Test:</strong> <a href="https://merrickmath.github.io/APSTAT/materials/Unit1.pdf">Slides</a> </li>
+  <li><a href="https://merrickmath.github.io/APSTAT/materials/Unit1.pdf">Slides</a> </li>
 </ul>
 
 
-
-<!-- Materials -->
-<h2 id="materials">Games</h2>
-
+<!-- Mental Math -->
+<h2 id="materials">Mental Math</h2>
 <ul>
   <li><a href="https://merrickmath.github.io/APSTAT/materials/Unit1.pdf">Slides</a></li>
+</ul>
+
+<!-- Puzzles -->
+<h2 id="materials">Puzzles</h2>
+<ul>
+  <li class="linkitem"><a href="https://krazydad.com/tablet/puzzles.php" target="_blank" rel="noopener"><span>Krazy Dad Interactive Puzzles</span></a></li>
+  <li class="linkitem"><a href="https://www.puzzle-star-battle.com" target="_blank" rel="noopener"><span>Logic Puzzles Galore</span></a></li>
+  <li class="linkitem"><a href="https://mathpickle.com" target="_blank" rel="noopener"><span>Math Pickle</span></a></li>
 </ul>
 
 <!-- Resources -->
