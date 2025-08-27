@@ -8,38 +8,38 @@
     :root{
       --bg:#fafafa;
       --card:#ffffff; 
-      --muted:#4b5563; /* slate-600 */
-      --text:#111827; /* gray-900 */
-      --accent:#1d4ed8; /* blue-700 */
-      --accent-weak:#e0e7ff; /* indigo-100 */
-      --ok:#15803d; /* green-700 */
-      --error:#b91c1c; /* red-700 */
+      --muted:#4b5563;
+      --text:#111827;
+      --accent:#1d4ed8;
+      --accent-weak:#e0e7ff;
+      --ok:#15803d;
+      --error:#b91c1c;
       --border:#e5e7eb;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:"Latin Modern Roman","Computer Modern Serif",Georgia,Cambria,"Times New Roman",Times,serif;}
-    .wrap{max-width:900px;margin:0 auto;padding:28px}
-    h1,h2{line-height:1.2;margin:0 0 12px;font-family:"Latin Modern Roman","Computer Modern Serif",Georgia,serif}
-    h1{font-size:2.2rem;text-align:center;margin-bottom:20px}
-    h2{font-size:1.4rem;}
-    p{color:var(--muted)}
-    .card{background:var(--card);box-shadow:0 2px 6px rgba(0,0,0,.05);border-radius:12px;padding:18px;border:1px solid var(--border);margin-top:14px}
-    .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px}
-    button{border:1px solid var(--border);border-radius:10px;padding:10px 14px;background:white;color:var(--text);cursor:pointer;transition:background .15s ease, border-color .15s ease; font-family:inherit}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:"Latin Modern Roman","Computer Modern Serif",Georgia,Cambria,"Times New Roman",Times,serif;font-size:14px;}
+    .wrap{max-width:900px;margin:0 auto;padding:20px}
+    h1,h2{line-height:1.2;margin:0 0 8px;font-family:"Latin Modern Roman","Computer Modern Serif",Georgia,serif}
+    h1{font-size:1.6rem;text-align:center;margin-bottom:12px}
+    h2{font-size:1.1rem;}
+    p{color:var(--muted);font-size:13px}
+    .card{background:var(--card);box-shadow:0 1px 4px rgba(0,0,0,.05);border-radius:8px;padding:12px;border:1px solid var(--border);margin-top:10px}
+    .toolbar{display:flex;gap:6px;flex-wrap:wrap;margin-top:6px}
+    button{border:1px solid var(--border);border-radius:6px;padding:6px 10px;background:white;color:var(--text);cursor:pointer;transition:background .15s ease; font-family:inherit;font-size:13px}
     button:hover{background:#f9fafb}
     .btn-primary{background:var(--accent);color:white;border-color:var(--accent)}
     .btn-primary:hover{filter:brightness(1.03)}
-    .pill{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border:1px solid var(--border);border-radius:999px;background:#f8fafc;color:var(--muted);font-size:.9rem}
-    .mono{font-family:"Latin Modern Mono","Courier New",monospace}
-    .problem{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px dashed var(--border)}
+    .pill{display:inline-flex;align-items:center;gap:4px;padding:4px 8px;border:1px solid var(--border);border-radius:999px;background:#f8fafc;color:var(--muted);font-size:.75rem}
+    .mono{font-family:"Latin Modern Mono","Courier New",monospace;font-size:13px}
+    .problem{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px dashed var(--border)}
     .problem:last-child{border-bottom:0}
     .idx{opacity:.7;min-width:2ch}
-    .solution{display:none;color:var(--ok)}
-    .formula{font-family:"Latin Modern Mono","Courier New",monospace;color:#065f46;background:#ecfdf5;border:1px solid #bbf7d0;padding:8px;border-radius:10px}
-    .footer{margin-top:24px;font-size:.9rem;color:#6b7280}
-    .tag{padding:4px 8px;border-radius:999px;background:var(--accent-weak);color:var(--accent);border:1px solid var(--border);font-size:.8rem}
-    input[type="text"]{outline:none;padding:8px 10px;border-radius:8px;border:1px solid var(--border);background:#fff;color:var(--text);min-width:180px}
-    .stack{display:flex;flex-direction:column;gap:6px}
+    .solution{display:none;color:var(--ok);font-size:13px}
+    .formula{font-family:"Latin Modern Mono","Courier New",monospace;color:#065f46;background:#ecfdf5;border:1px solid #bbf7d0;padding:6px;border-radius:8px;font-size:13px}
+    .footer{margin-top:16px;font-size:12px;color:#6b7280}
+    .tag{padding:2px 6px;border-radius:999px;background:var(--accent-weak);color:var(--accent);border:1px solid var(--border);font-size:.75rem}
+    input[type="text"]{outline:none;padding:4px 6px;border-radius:6px;border:1px solid var(--border);background:#fff;color:var(--text);min-width:120px;font-size:13px}
+    .stack{display:flex;flex-direction:column;gap:4px}
   </style>
 </head>
 <body>
@@ -101,16 +101,12 @@
   </div>
 
   <script>
-    // ——— Config ———
-    const GST_RATE = 0.05; // Alberta
+    const GST_RATE = 0.05;
     const rng = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
     const toMoney = (n) => "$" + Number(n).toFixed(2);
-
-    // Discount helpers
     const discounted = (price, pct) => price * (1 - pct/100);
     const gstOn = (price) => +(price * GST_RATE).toFixed(2);
 
-    // Row factory
     const makeRow = (idx, text, solText) => {
       const row = document.createElement('div');
       row.className = 'problem';
@@ -119,7 +115,7 @@
       const right = document.createElement('div');
       const input = document.createElement('input');
       input.type = 'text';
-      input.placeholder = 'your answer';
+      input.placeholder = 'ans';
       input.className = 'mono';
       const sol = document.createElement('div');
       sol.className = 'solution mono';
@@ -137,7 +133,7 @@
       const t = parseFloat(cleaned(typed));
       const c = parseFloat(cleaned(correct));
       if (isNaN(t) || isNaN(c)) return false;
-      return Math.abs(t - c) <= 0.01; // within a cent
+      return Math.abs(t - c) <= 0.01;
     }
 
     const quickJudge = (input, solText) => {
@@ -147,7 +143,6 @@
       setTimeout(()=>{ input.style.outline = ''; }, 600);
     }
 
-    // Generators
     function genSalesSet(){
       const prices = [130, 85, 37, 65, 130, 120];
       const discounts = [20, 20, 20, 30, 30, 15];
@@ -167,12 +162,9 @@
       ].map(obj=> ({...obj, price: Math.max(10, obj.price + rng(-10,10))}));
     }
 
-    // Renderers
     function renderAll(){
       const seed = Math.random().toString(36).slice(2,8).toUpperCase();
       document.getElementById('seed-label').textContent = seed;
-
-      // Sales only
       const salesList = document.getElementById('list-sales');
       salesList.innerHTML = '';
       const sales = genSalesSet();
@@ -185,7 +177,6 @@
         window._sales_nodes.push({input, sol});
       });
 
-      // GST only
       const gstList = document.getElementById('list-gst');
       gstList.innerHTML = '';
       const gstItems = genGSTSet();
@@ -197,7 +188,6 @@
         window._gst_nodes.push({input, sol});
       });
 
-      // Final (discount + GST on discounted)
       const finalList = document.getElementById('list-final');
       finalList.innerHTML = '';
       const finals = genFinalSet();
@@ -228,12 +218,10 @@
       all.forEach(({input, sol})=> quickJudge(input, sol.textContent));
     }
 
-    // Wire buttons
     document.getElementById('btn-new').addEventListener('click', renderAll);
     document.getElementById('btn-toggle').addEventListener('click', toggleSolutions);
     document.getElementById('btn-check').addEventListener('click', quickCheckAll);
 
-    // initial render
     renderAll();
   </script>
 </body>
