@@ -33,7 +33,8 @@
 <!-- Mental Math -->
 <h2 id="materials">Mental Math</h2>
 <ul>
-  <li><a href="https://merrickmath.github.io/APSTAT/materials/Unit1.pdf">Slides</a></li>
+  <li class="linkitem"><a href="https://MerrickMath.github.io/PAT.html" data-ext="true"><span>PAT 6 Practice</span></a></li>
+  <li class="linkitem"><a href="https://MerrickMath.github.io/Divisors.html" data-ext="true"><span>Divisor Trainer</span></a></li>
 </ul>
 
 <!-- Puzzles -->
@@ -44,12 +45,10 @@
   <li class="linkitem"><a href="https://mathpickle.com" target="_blank" rel="noopener"><span>Math Pickle</span></a></li>
 </ul>
 
-<!-- Resources -->
-<h2 id="resources">Miscelanous Resources</h2>
+<!-- Games -->
+<h2 id="resources"> Games </h2>
 <ul>
-  <li class="linkitem"><a href="https://MerrickMath.github.io/PAT.html" data-ext="true"><span>PAT 6 Practice</span></a></li>
   <li class="linkitem"><a href="https://MerrickMath.github.io/CoordinateGame.html" data-ext="true"><span>Coordinate Dash</span></a></li>
-  <li class="linkitem"><a href="https://MerrickMath.github.io/Divisors.html" data-ext="true"><span>Divisor Trainer</span></a></li>
   <li class="linkitem"><a href="https://MerrickMath.github.io/Geometryblitz.html" data-ext="true"><span>Geometry Blitz</span></a></li>
   <li class="linkitem"><a href="https://MerrickMath.github.io/Camelsim.html" data-ext="true"><span>Camel Racing Simulation</span></a></li>
   <li class="linkitem"><a href="https://MerrickMath.github.io/Mixture.html" data-ext="true"><span>Vial Mixture Game</span></a></li>
