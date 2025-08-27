@@ -20,7 +20,6 @@
   </a>
 </section>
 
-
 <!-- Quizzes -->
 <h2 id="exam">Materials</h2>
 <!-- Clear static expectations -->
@@ -28,7 +27,6 @@
 <ul>
   <li><a href="https://merrickmath.github.io/APSTAT/materials/Unit1.pdf">Slides</a> </li>
 </ul>
-
 
 <!-- Mental Math -->
 <h2 id="materials">Mental Math</h2>
@@ -56,6 +54,15 @@
   <li class="linkitem"><a href="https://www.mathplayground.com" target="_blank" rel="noopener"><span>Math Playground</span></a></li>
 </ul>
 
+<h2 id="sec-cool">Contests</h2>
+<ul class="linklist">
+  <li class="linkitem"><a href="https://www.cemc.uwaterloo.ca/contests/past_contests.html" target="_blank" rel="noopener"><span>CEMC Past Contests</span></a></li>
+  <li class="linkitem"><a href="https://artofproblemsolving.com/wiki/index.php/AMC_Problems_and_Solutions" target="_blank" rel="noopener"><span>AMC Problems and Solutions</span></a></li>
+  <li class="linkitem"><a href="https://mathkangaroo.ca/samples/en" target="_blank" rel="noopener"><span>Kangaroo Math Past Contests</span></a></li>
+  <li class="linkitem"><a href="https://science.ucalgary.ca/mathematics-statistics/engagement/educational-outreach/math-nite" target="_blank" rel="noopener"><span>Math Nite</span></a></li>
+  <li class="linkitem"><a href="https://renertmath.github.io/renertrabbit.html" target="_blank" rel="noopener"><span>Renert Rabbit</span></a></li>
+</ul>
+      
 <!-- Footer -->
 <p style="color:#777;margin-top:1.25rem">
   <small>Last updated: {{ page.last_updated | default: site.time | date: "%b %d, %Y" }}</small>
