@@ -33,22 +33,22 @@
 
 <!-- Materials -->
 <h2 id="materials">Games</h2>
-<p><em>Each unit includes the full slide deck and a concise “Quick Notes” handout for review.</em></p>
 
 <ul>
-  <li><strong>Unit 1:</strong> <a href="https://merrickmath.github.io/APSTAT/materials/Unit1.pdf">Slides</a></li>
+  <li><a href="https://merrickmath.github.io/APSTAT/materials/Unit1.pdf">Slides</a></li>
 </ul>
 
 <!-- Resources -->
 <h2 id="resources">Miscelanous Resources</h2>
 <ul>
-  <li><a href="https://merrickmath.github.io/APSTAT/materials/PastExamsByUnit.html">Past Exams Problems Tagged By Unit</a></li>
-  <li><a href="https://drive.google.com/drive/folders/1SAwh7_BTf8Mkrvddb032jgdsNS6mII9f?usp=sharing">Class Datasets</a></li>
-  <li><a href="https://www.jbstatistics.com">JBStatistics</a></li>
-  <li><a href="https://www.khanacademy.org/math/ap-statistics">Khan Academy: AP Statistics</a></li>
-  <li><a href="https://www.stapplet.com">Statistics Apps (Stapplet)</a></li>
-  <li><a href="https://www.r-project.org">R download</a></li>
-  <li><a href="https://www.rstudio.com/products/rstudio/download/">R Studio download</a></li>
+  <li class="linkitem"><a href="https://MerrickMath.github.io/PAT.html" data-ext="true"><span>PAT 6 Practice</span></a></li>
+  <li class="linkitem"><a href="https://MerrickMath.github.io/CoordinateGame.html" data-ext="true"><span>Coordinate Dash</span></a></li>
+  <li class="linkitem"><a href="https://MerrickMath.github.io/Divisors.html" data-ext="true"><span>Divisor Trainer</span></a></li>
+  <li class="linkitem"><a href="https://MerrickMath.github.io/Geometryblitz.html" data-ext="true"><span>Geometry Blitz</span></a></li>
+  <li class="linkitem"><a href="https://MerrickMath.github.io/Camelsim.html" data-ext="true"><span>Camel Racing Simulation</span></a></li>
+  <li class="linkitem"><a href="https://MerrickMath.github.io/Mixture.html" data-ext="true"><span>Vial Mixture Game</span></a></li>
+  <li class="linkitem"><a href="https://playset.netlify.app" data-ext="true"><span>Set Game</span></a></li>
+  <li class="linkitem"><a href="https://www.mathplayground.com" target="_blank" rel="noopener"><span>Math Playground</span></a></li>
 </ul>
 
 <!-- Footer -->
