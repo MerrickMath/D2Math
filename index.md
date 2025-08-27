@@ -7,24 +7,13 @@
   <!-- Join code: VPZG-6XVG-9T8JS -->
 </section>
 
-<!-- Quick links as “cards” -->
-<section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.75rem;margin:1rem 0">
-  <a class="card" href="https://merrickmath.github.io/PAT.html" style="text-decoration:none;border:1px solid #e6e6e6;border-radius:12px;padding:.9rem">
-    <strong>PAT 6 Practice</strong><br><small>Mental Math</small>
-  </a>
-  <a class="card" href="https://merrickmath.github.io/CoordinateGame.html" style="text-decoration:none;border:1px solid #e6e6e6;border-radius:12px;padding:.9rem">
-    <strong>Coordinate Dash</strong><br><small>Transformations</small>
-  </a>
-  <a class="card" href="https://merrickmath.github.io/Divisors.html" style="text-decoration:none;border:1px solid #e6e6e6;border-radius:12px;padding:.9rem">
-    <strong>Divisor Trainer</strong><br><small> Mental Math</small>
-  </a>
-</section>
-
 <!-- Quizzes -->
+<!--
 <h2 id="exam">Materials</h2>
 <ul>
   <li><a href="https://merrickmath.github.io/APSTAT/materials/Unit1.pdf">Slides</a> </li>
 </ul>
+--> 
 
 <!-- Mental Math -->
 <h2 id="materials">Mental Math</h2>
