@@ -22,93 +22,25 @@
 
 
 <!-- AP Exam -->
-<h2 id="exam">The Exam</h2>
-<div style="border-left:4px solid #2f855a;background:#f6fffa;padding:.75rem 1rem;border-radius:6px">
-  <p style="margin:0">
-    <strong>AP Statistics Exam:</strong> <u>Thursday, May 7, 2026 at 12:00 PM local time</u>.
-    See the official page for details and updates.
-  </p>
-  <p style="margin:.4rem 0 0">
-    <a href="https://apcentral.collegeboard.org/courses/ap-statistics/exam">Detailed exam information</a>
-  </p>
-</div>
-
+<h2 id="exam">Materials</h2>
 <!-- Clear static expectations -->
-<h3 style="margin-top:1rem">What to Expect on Exam Day</h3>
+<h3 style="margin-top:1rem">Quizzes</h3>
 <ul>
-  <li><strong>Section I:</strong> 40 multiple-choice questions — 90 minutes (50% of score)</li>
-  <li><strong>Section II:</strong> 6 free-response questions (including the Investigative Task) — 90 minutes (50% of score)</li>
-  <li>Bring an approved calculator and extra pencils.</li>
+  <li><strong>Test:</strong> <a href="https://merrickmath.github.io/APSTAT/materials/Unit1.pdf">Slides</a> </li>
 </ul>
 
-<!-- Timeline -->
-<h2 id="timeline">Timeline & Homework</h2>
-<p><em>Target windows for watching videos and completing assigned problems.</em></p>
-<ul>
-  <li><strong>Sept 5 – Sept 20:</strong> Unit 1</li>
-</ul>
-
-<!-- Assessments -->
-<h2 id="tests">Tests</h2>
-<p><em>Approved Calculators are allowed on all tests.</em></p>
-<ul>
-  <li><strong>Unit 1:</strong> </li>
-  <li><strong>Unit 2:</strong> </li>
-  <li><strong>Unit 3:</strong> </li>
-  <li><strong>Unit 4:</strong> </li>
-  <li><strong>Unit 5:</strong> </li>
-  <li><strong>Unit 6:</strong> </li>
-  <li><strong>Unit 7:</strong> </li>
-  <li><strong>Unit 8:</strong> </li>
-  <li><strong>Unit 9:</strong> </li>
-</ul>
 
 
 <!-- Materials -->
-<h2 id="materials">In-Class Materials</h2>
+<h2 id="materials">Games</h2>
 <p><em>Each unit includes the full slide deck and a concise “Quick Notes” handout for review.</em></p>
 
 <ul>
-  <li><strong>Unit 1:</strong> 
-    <a href="https://merrickmath.github.io/APSTAT/materials/Unit1.pdf">Slides</a> | 
-    <a href="https://merrickmath.github.io/APSTAT/materials/Unit1QuickNotes.pdf">Quick Notes</a>
-  </li>
-  <li><strong>Unit 2:</strong> 
-    <a href="https://merrickmath.github.io/APSTAT/materials/Unit2.pdf">Slides</a> | 
-    <a href="https://merrickmath.github.io/APSTAT/materials/Unit2QuickNotes.pdf">Quick Notes</a>
-  </li>
-  <li><strong>Unit 3:</strong> 
-    <a href="https://merrickmath.github.io/APSTAT/materials/Unit3.pdf">Slides</a> | 
-    <a href="https://merrickmath.github.io/APSTAT/materials/Unit3QuickNotes.pdf">Quick Notes</a>
-  </li>
-  <li><strong>Unit 4:</strong> 
-    <a href="https://merrickmath.github.io/APSTAT/materials/Unit4.pdf">Slides</a> | 
-    <a href="https://merrickmath.github.io/APSTAT/materials/Unit4QuickNotes.pdf">Quick Notes</a>
-  </li>
-  <li><strong>Unit 5:</strong> 
-    <a href="https://merrickmath.github.io/APSTAT/materials/Unit5.pdf">Slides</a> | 
-    <a href="https://merrickmath.github.io/APSTAT/materials/Unit5QuickNotes.pdf">Quick Notes</a>
-  </li>
-  <li><strong>Unit 6:</strong> 
-    <a href="https://merrickmath.github.io/APSTAT/materials/Unit6.pdf">Slides</a> | 
-    <a href="https://merrickmath.github.io/APSTAT/materials/Unit6QuickNotes.pdf">Quick Notes</a>
-  </li>
-  <li><strong>Unit 7:</strong> 
-    <a href="https://merrickmath.github.io/APSTAT/materials/Unit7.pdf">Slides</a> | 
-    <a href="https://merrickmath.github.io/APSTAT/materials/Unit7QuickNotes.pdf">Quick Notes</a>
-  </li>
-  <li><strong>Unit 8:</strong> 
-    <a href="https://merrickmath.github.io/APSTAT/materials/Unit8.pdf">Slides</a> | 
-    <a href="https://merrickmath.github.io/APSTAT/materials/Unit8QuickNotes.pdf">Quick Notes</a>
-  </li>
-  <li><strong>Unit 9:</strong> 
-    <a href="https://merrickmath.github.io/APSTAT/materials/Unit9.pdf">Slides</a> | 
-    <a href="https://merrickmath.github.io/APSTAT/materials/Unit9QuickNotes.pdf">Quick Notes</a>
-  </li>
+  <li><strong>Unit 1:</strong> <a href="https://merrickmath.github.io/APSTAT/materials/Unit1.pdf">Slides</a></li>
 </ul>
 
 <!-- Resources -->
-<h2 id="resources">Class Resources</h2>
+<h2 id="resources">Miscelanous Resources</h2>
 <ul>
   <li><a href="https://merrickmath.github.io/APSTAT/materials/PastExamsByUnit.html">Past Exams Problems Tagged By Unit</a></li>
   <li><a href="https://drive.google.com/drive/folders/1SAwh7_BTf8Mkrvddb032jgdsNS6mII9f?usp=sharing">Class Datasets</a></li>
