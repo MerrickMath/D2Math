@@ -61,9 +61,9 @@
         </span>
         <span class="pill">Count:
           <select id="count">
-            <option>12</option>
-            <option>8</option>
-            <option>16</option>
+            <option>5</option>
+            <option>10</option>
+            <option>15</option>
             <option>20</option>
           </select>
         </span>
@@ -91,19 +91,48 @@
     }
 
     function genProblem(forcedMode, digits){
-      const mode = forcedMode==='mixed'? choice(['plus','minus']):forcedMode;
-      const N=newN(digits);
-      let a;
-      if(mode==='plus'){
-        a=rng(10,Math.max(12,Math.min(999,N-25)));
+      const mode = forcedMode === 'mixed' ? choice(['plus','minus']) : forcedMode;
+    
+      // Draw N (3–4 digits), but if minus-mode needs a constraint, adjust below.
+      let N = newN(digits);
+    
+      let a, minA, maxA;
+    
+      if (mode === 'plus') {
+        // Total is N; want both parts at least 10% of N.
+        minA = Math.max(10, Math.ceil(0.10 * N));
+        maxA = Math.min(999, Math.floor(0.90 * N));
+        if (maxA < minA) { maxA = minA; }
+        a = rng(minA, maxA);
+        const box = N - a;
+        return { mode, a, N, box, sol: fmt(box) };
+    
       } else {
-        const aMax=Math.max(12,Math.min(999,9999-N));
-        a=rng(10,aMax);
+        // mode === 'minus'
+        // Total is box = N + a; want min(N, a) >= 0.1 * (N + a).
+        // This is satisfied if a >= N/9 and (practically) a <= 9N (always true for our bounds).
+        // Also must keep box <= 9999 => a <= 9999 - N.
+        // If N too large (>= 9000), shrink N so a range exists.
+        if (N > 8999) N = rng(100, 8999);
+    
+        minA = Math.max(10, Math.ceil(N / 9));
+        maxA = Math.min(999, 9999 - N);
+    
+        // Safety: if still inverted, nudge N down until valid (rare).
+        if (maxA < minA) {
+          const newUpper = Math.max(100, Math.min(8999, N - 1));
+          N = newUpper;
+          minA = Math.max(10, Math.ceil(N / 9));
+          maxA = Math.min(999, 9999 - N);
+        }
+        if (maxA < minA) { maxA = minA; } // final guard
+    
+        a = rng(minA, maxA);
+        const box = N + a;
+        return { mode, a, N, box, sol: fmt(box) };
       }
-      const box=mode==='plus'?(N-a):(N+a);
-      const sol=fmt(box);
-      return {mode,a,N,box,sol};
     }
+
 
     function approxIntEqual(typed, correct){
       const cleaned=(s)=> String(s).replace(/[^0-9\-]/g,'');
