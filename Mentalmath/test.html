@@ -45,13 +45,6 @@
         <button id="btn-toggle">Show Solutions</button>
         <button id="btn-check">Quick Check</button>
         <span class="pill">Set: <span id="seed-label" class="mono"></span></span>
-        <span class="pill">Mode:
-          <select id="mode">
-            <option value="mixed">Mixed</option>
-            <option value="minus">☐ − a = N</option>
-            <option value="plus">☐ + a = N</option>
-          </select>
-        </span>
         <span class="pill">Digits (N):
           <select id="digits">
             <option value="both">3 or 4</option>
@@ -91,7 +84,7 @@
     }
 
     function genProblem(forcedMode, digits){
-      const mode = forcedMode === 'mixed' ? choice(['plus','minus']) : forcedMode;
+      const mode = 'mixed';
     
       // Draw N (3–4 digits), but if minus-mode needs a constraint, adjust below.
       let N = newN(digits);
@@ -261,7 +254,7 @@
       document.getElementById('seed-label').textContent=seed;
       const list=document.getElementById('problem-list');
       list.innerHTML='';
-      const mode=document.getElementById('mode').value;
+      const mode = 'mixed';
       const digits=document.getElementById('digits').value;
       const count=parseInt(document.getElementById('count').value,10);
       window._nodes=[];
@@ -281,7 +274,6 @@
     document.getElementById('btn-new').addEventListener('click',renderAll);
     document.getElementById('btn-toggle').addEventListener('click',toggleSolutions);
     document.getElementById('btn-check').addEventListener('click',quickCheckAll);
-    document.getElementById('mode').addEventListener('change',renderAll);
     document.getElementById('digits').addEventListener('change',renderAll);
     document.getElementById('count').addEventListener('change',renderAll);
     renderAll();
