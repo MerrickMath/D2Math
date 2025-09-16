@@ -72,7 +72,6 @@
   </header>
 
   <main>
-
     <!-- Mental Math -->
     <section>
       <h2 id="materials">Mental Math</h2>
@@ -105,7 +104,6 @@
         <li><a href="https://merrickmath.github.io/Games/Primejumper.html" data-ext="true">Prime Jumper</a></li>
         <li><a href="https://merrickmath.github.io/Games/Geometryblitz.html" data-ext="true">Geometry Blitz</a></li>
         <li><a href="https://merrickmath.github.io/Games/Camelrace.html" data-ext="true">Camel Racing Simulation</a></li>
-        <!-- <li><a href="https://merrickmath.github.io/Games/Mixture.html" data-ext="true">Vial Mixture Game</a></li> --> 
         <li><a href="https://merrickmath.github.io/Games/Vectortarget.html" data-ext="true">Vector Target</a></li>
         <li><a href="https://merrickmath.github.io/LinearAlgebra/Activities/Games/VectorRacing.pdf" data-ext="true">Vector Racing (Instructions)</a></li>
         <li><a href="https://merrickmath.github.io/LinearAlgebra/Activities/Games/VectorWars.pdf" data-ext="true">Vector Battle (Instructions)</a></li>
@@ -133,13 +131,57 @@
   </main>
 
   <script>
-    // Light client-side date for Last updated
-    (function(){
-      const el = document.getElementById('last-updated');
-      if(!el) return;
-      const d = new Date();
-      el.textContent = d.toLocaleDateString(undefined,{month:'short',day:'2-digit',year:'numeric'});
-    })();
+  /* Last updated = date of the last GitHub commit that touched this page */
+  (async function () {
+    const target = document.querySelector('#last-updated');
+    if (!target) return;
+
+    const OWNER  = 'merrickmath';   // GitHub username or org
+    const REPO   = 'Div34Math';     // Repository name
+    const BRANCH = '';              // branch if needed
+    const siteBase = '/Div34Math/'; // adjust if site path differs
+
+    let path = window.location.pathname;
+    if (siteBase && path.startsWith(siteBase)) path = path.slice(siteBase.length);
+    path = path.replace(/^\/+/, '');
+    if (!path || path.endsWith('/')) path += 'index.html';
+
+    const commitURL = (filePath) => {
+      const u = new URL(`https://api.github.com/repos/${OWNER}/${REPO}/commits`);
+      u.searchParams.set('path', filePath);
+      u.searchParams.set('per_page', '1');
+      if (BRANCH) u.searchParams.set('sha', BRANCH);
+      return u.toString();
+    };
+
+    const fmt = (iso) => {
+      const d = new Date(iso);
+      const opts = { month: 'short', day: '2-digit', year: 'numeric' };
+      return { short: d.toLocaleDateString(undefined, opts), full: d.toLocaleString() };
+    };
+
+    try {
+      let res = await fetch(commitURL(path), { headers: { 'Accept': 'application/vnd.github+json' } });
+      if (!res.ok) throw new Error('GitHub API error');
+      const commits = await res.json();
+      let iso = commits?.[0]?.commit?.committer?.date || commits?.[0]?.commit?.author?.date;
+      if (!iso) {
+        const repoRes = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}`);
+        if (repoRes.ok) {
+          const repo = await repoRes.json();
+          iso = repo?.pushed_at || null;
+        }
+      }
+      if (!iso) iso = document.lastModified;
+      const { short, full } = fmt(iso);
+      target.textContent = short;
+      target.title = `Last update source time: ${full}`;
+    } catch (err) {
+      const { short, full } = fmt(document.lastModified);
+      target.textContent = short;
+      target.title = `Fallback from document.lastModified (${full})`;
+    }
+  })();
   </script>
 </body>
 </html>
