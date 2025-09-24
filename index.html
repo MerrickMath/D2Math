@@ -6,58 +6,48 @@
   <title>Division 2 Mathematics – Mr. Merrick</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;600&display=swap" rel="stylesheet">
   <style>
-  body {
-    margin: 0;
-    font-family: 'Cormorant', serif;
-    color: #606c71;
-    line-height: 1.5;
-    background: #f9fafc;
+  :root{
+    --ink:#606c71; --paper:#f9fafc; --brand1:#1A2980; --brand2:#26D0CE; --accent:#0AB9DC; --ink-2:#514a9d;
   }
-  header {
-    text-align: center;
-    padding: 1.5rem 1rem;
-    background: linear-gradient(135deg,#1A2980,#26D0CE);
-    color: white;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.12);
-  }
-  header h1 {
-    margin: 0;
-    font-weight: 700;
-    font-size: clamp(26px, 3.8vw, 40px);
-  }
-  header p { margin-top: .3rem; font-size: 1.05rem; opacity: 0.9; }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body { margin: 0; font-family: 'Cormorant', serif; color: var(--ink); line-height: 1.5; background: var(--paper); }
+
+  header { position: relative; text-align: center; padding: 1.5rem 1rem 1.5rem; background: linear-gradient(135deg,var(--brand1),var(--brand2)); color: white; box-shadow: 0 3px 8px rgba(0,0,0,0.12); }
+  header h1 { margin: 0; font-weight: 700; font-size: clamp(26px, 3.8vw, 40px); }
+  header p { margin-top: .4rem; font-size: 1.05rem; opacity: 0.9; }
+  .contact-icon { margin-top:.4rem; }
   .contact-icon svg { fill: white; }
 
-  main { max-width: 1000px; margin: 1.5rem auto; padding: 0 1rem; display: grid; gap: 1rem; }
+  /* Quick-jump sticky nav */
+  .toc { position: sticky; top: 0; z-index: 10; background: linear-gradient(135deg,rgba(26,41,128,.97),rgba(38,208,206,.97)); padding: .4rem .8rem; box-shadow: 0 6px 14px rgba(0,0,0,.1); display:flex; gap:.5rem; flex-wrap:wrap; justify-content:center; }
+  .toc a { --padx: .85rem; --pady: .4rem; color:#fff; font-weight:600; text-decoration:none; border:1px solid rgba(255,255,255,.45); padding: var(--pady) var(--padx); border-radius: 999px; backdrop-filter:saturate(140%) blur(4px); transition: transform .08s ease, background .2s ease; }
+  .toc a:hover{ background: rgba(255,255,255,.15); }
+  .toc a:active{ transform: scale(.98); }
 
-  section, article {
-    background: white;
-    border-radius: 10px;
-    padding: 1rem 1.2rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    border: 1px solid #e8eaf2;
-  }
-  section a { color: #0AB9DC; text-decoration: none; font-weight: 600; }
-  section a:hover { color: #1A2980; text-decoration: underline; }
+  main { max-width: 1000px; margin: .6rem auto; padding: 0 1rem 1.2rem; display: grid; gap: 1rem; }
 
-  h2 {
-    color: #514a9d;
-    font-weight: 600;
-    border-bottom: 2px solid #1A2980;
-    padding-bottom: .2rem;
-    margin: 0 0 .6rem;
-  }
-  h3 { margin: .6rem 0 .4rem; color: #1A2980; font-weight: 600; font-size: 1.05rem; }
+  section, article { background: white; border-radius: 10px; padding: 1rem 1.2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #e8eaf2; }
+  section a { color: var(--accent); text-decoration: none; font-weight: 600; }
+  section a:hover { color: var(--brand1); text-decoration: underline; }
+
+  h2 { color: var(--ink-2); font-weight: 600; border-bottom: 2px solid var(--brand1); padding-bottom: .2rem; margin: 0 0 .6rem; scroll-margin-top: 4.5rem; }
+  h3 { margin: .6rem 0 .4rem; color: var(--brand1); font-weight: 600; font-size: 1.05rem; }
 
   ul { line-height: 1.4; margin: .4rem 0; padding-left: 1rem; }
   li { margin: .2rem 0; }
 
-  footer {
-    margin-top: 1.2rem;
-    text-align: center;
-    color: #777;
-    font-size: .85rem;
-  }
+  /* In-class dropdowns */
+  details { border: 1px solid #e8eaf2; border-radius: 10px; padding: .6rem .8rem; margin:.6rem 0; box-shadow: 0 2px 8px rgba(0,0,0,.03); }
+  details > summary { list-style:none; cursor:pointer; display:flex; align-items:center; gap:.5rem; font-weight:700; color: var(--brand1); }
+  details > summary::-webkit-details-marker { display:none; }
+  details > summary::before{ content:'▸'; transition: transform .2s ease; }
+  details[open] > summary::before{ transform: rotate(90deg); }
+  .muted{ color:#7a8594; font-size:.95rem; }
+
+  footer { margin-top: 1.2rem; text-align: center; color: #777; font-size: .85rem; }
+
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} .toc a{transition:none} details > summary::before{transition:none} }
   </style>
 </head>
 <body>
@@ -71,10 +61,19 @@
     <p>Mr. Merrick</p>
   </header>
 
+  <!-- Quick jump buttons (sticky) -->
+  <nav class="toc" aria-label="Section quick links">
+    <a href="#mental-math">Mental Math</a>
+    <a href="#puzzles">Puzzles</a>
+    <a href="#games">Games</a>
+    <a href="#in-class">In‑Class Materials</a>
+    <a href="#contests">Contests</a>
+  </nav>
+
   <main>
     <!-- Mental Math -->
     <section>
-      <h2 id="materials">Mental Math</h2>
+      <h2 id="mental-math">Mental Math</h2>
       <ul>
         <li><a href="https://merrickmath.github.io/Mentalmath/PAT6.html" data-ext="true">PAT 6 Practice</a></li>
         <li><a href="https://merrickmath.github.io/Mentalmath/Divisible.html" data-ext="true">Divisbility Shootout</a></li>
@@ -98,7 +97,7 @@
 
     <!-- Games -->
     <section>
-      <h2 id="resources">Games</h2>
+      <h2 id="games">Games</h2>
       <ul>
         <li><a href="https://merrickmath.github.io/Games/CoordinateGame.html" data-ext="true">Coordinate Dash</a></li>
         <li><a href="https://merrickmath.github.io/Games/Primejumper.html" data-ext="true">Prime Jumper</a></li>
@@ -112,9 +111,33 @@
       </ul>
     </section>
 
+    <!-- In‑Class Materials (NEW) -->
+    <section>
+      <h2 id="in-class">In‑Class Materials</h2>
+      <p class="muted">Drop‑downs below will collect handouts, slide decks, worksheets, and board notes. Add links as they’re ready.</p>
+
+      <details>
+        <summary>Grade 4/5 – 2025</summary>
+        <ul>
+          <li><!-- Example placeholder items; replace or extend as needed -->
+            <a href="#" aria-disabled="true" tabindex="-1">(Add resource link…)</a>
+          </li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Grade 6 – 2025</summary>
+        <ul>
+          <li>
+            <a href="#" aria-disabled="true" tabindex="-1">(Add resource link…)</a>
+          </li>
+        </ul>
+      </details>
+    </section>
+
     <!-- Contests -->
     <section>
-      <h2 id="sec-cool">Contests</h2>
+      <h2 id="contests">Contests</h2>
       <ul>
         <li><a href="https://www.cemc.uwaterloo.ca/contests/past_contests.html" target="_blank" rel="noopener">CEMC Past Contests</a></li>
         <li><a href="https://artofproblemsolving.com/wiki/index.php/AMC_Problems_and_Solutions" target="_blank" rel="noopener">AMC Problems and Solutions</a></li>
@@ -143,7 +166,7 @@
 
     let path = window.location.pathname;
     if (siteBase && path.startsWith(siteBase)) path = path.slice(siteBase.length);
-    path = path.replace(/^\/+/, '');
+    path = path.replace(/^\/+/,'');
     if (!path || path.endsWith('/')) path += 'index.html';
 
     const commitURL = (filePath) => {
@@ -182,6 +205,9 @@
       target.title = `Fallback from document.lastModified (${full})`;
     }
   })();
+
+  // Open external links with data-ext in a new tab (safety)
+  document.querySelectorAll('a[data-ext]')?.forEach(a=>{ a.setAttribute('target','_blank'); a.setAttribute('rel','noopener'); });
   </script>
 </body>
 </html>
